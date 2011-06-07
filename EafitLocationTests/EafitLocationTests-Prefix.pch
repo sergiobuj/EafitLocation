@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'EafitLocationTests' target in the 'EafitLocationTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif

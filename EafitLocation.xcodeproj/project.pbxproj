@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DFE9795139EB99200AC7C00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFE9794139EB99200AC7C00 /* UIKit.framework */; };
+		0DFE9797139EB99200AC7C00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFE9796139EB99200AC7C00 /* Foundation.framework */; };
+		0DFE9799139EB99200AC7C00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFE9798139EB99200AC7C00 /* CoreGraphics.framework */; };
+		0DFE979F139EB99200AC7C00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DFE979D139EB99200AC7C00 /* InfoPlist.strings */; };
+		0DFE97A2139EB99200AC7C00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE97A1139EB99200AC7C00 /* main.m */; };
+		0DFE97A5139EB99200AC7C00 /* EafitLocationAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE97A4139EB99200AC7C00 /* EafitLocationAppDelegate.m */; };
+		0DFE97A8139EB99200AC7C00 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DFE97A6139EB99200AC7C00 /* MainWindow.xib */; };
+		0DFE97AF139EB99200AC7C00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFE9794139EB99200AC7C00 /* UIKit.framework */; };
+		0DFE97B0139EB99200AC7C00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFE9796139EB99200AC7C00 /* Foundation.framework */; };
+		0DFE97B1139EB99200AC7C00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFE9798139EB99200AC7C00 /* CoreGraphics.framework */; };
+		0DFE97B9139EB99200AC7C00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DFE97B7139EB99200AC7C00 /* InfoPlist.strings */; };
+		0DFE97BC139EB99200AC7C00 /* EafitLocationTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 0DFE97BB139EB99200AC7C00 /* EafitLocationTests.h */; };
+		0DFE97BE139EB99200AC7C00 /* EafitLocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE97BD139EB99200AC7C00 /* EafitLocationTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0DFE97B2139EB99200AC7C00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DFE9787139EB99200AC7C00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DFE978F139EB99200AC7C00;
+			remoteInfo = EafitLocation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0DFE9790139EB99200AC7C00 /* EafitLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EafitLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DFE9794139EB99200AC7C00 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0DFE9796139EB99200AC7C00 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0DFE9798139EB99200AC7C00 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0DFE979C139EB99200AC7C00 /* EafitLocation-Info.plist */ = {isa = PBXFileReference; path = "EafitLocation-Info.plist"; sourceTree = "<group>"; };
+		0DFE979E139EB99200AC7C00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0DFE97A0139EB99200AC7C00 /* EafitLocation-Prefix.pch */ = {isa = PBXFileReference; path = "EafitLocation-Prefix.pch"; sourceTree = "<group>"; };
+		0DFE97A1139EB99200AC7C00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0DFE97A3139EB99200AC7C00 /* EafitLocationAppDelegate.h */ = {isa = PBXFileReference; path = EafitLocationAppDelegate.h; sourceTree = "<group>"; };
+		0DFE97A4139EB99200AC7C00 /* EafitLocationAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EafitLocationAppDelegate.m; sourceTree = "<group>"; };
+		0DFE97A7139EB99200AC7C00 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		0DFE97AE139EB99200AC7C00 /* EafitLocationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EafitLocationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DFE97B6139EB99200AC7C00 /* EafitLocationTests-Info.plist */ = {isa = PBXFileReference; path = "EafitLocationTests-Info.plist"; sourceTree = "<group>"; };
+		0DFE97B8139EB99200AC7C00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0DFE97BA139EB99200AC7C00 /* EafitLocationTests-Prefix.pch */ = {isa = PBXFileReference; path = "EafitLocationTests-Prefix.pch"; sourceTree = "<group>"; };
+		0DFE97BB139EB99200AC7C00 /* EafitLocationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EafitLocationTests.h; sourceTree = "<group>"; };
+		0DFE97BD139EB99200AC7C00 /* EafitLocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EafitLocationTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0DFE978D139EB99200AC7C00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DFE9795139EB99200AC7C00 /* UIKit.framework in Frameworks */,
+				0DFE9797139EB99200AC7C00 /* Foundation.framework in Frameworks */,
+				0DFE9799139EB99200AC7C00 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DFE97AA139EB99200AC7C00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DFE97AF139EB99200AC7C00 /* UIKit.framework in Frameworks */,
+				0DFE97B0139EB99200AC7C00 /* Foundation.framework in Frameworks */,
+				0DFE97B1139EB99200AC7C00 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DFE9785139EB99200AC7C00 = {
+			isa = PBXGroup;
+			children = (
+				0DFE979A139EB99200AC7C00 /* EafitLocation */,
+				0DFE97B4139EB99200AC7C00 /* EafitLocationTests */,
+				0DFE9793139EB99200AC7C00 /* Frameworks */,
+				0DFE9791139EB99200AC7C00 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0DFE9791139EB99200AC7C00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0DFE9790139EB99200AC7C00 /* EafitLocation.app */,
+				0DFE97AE139EB99200AC7C00 /* EafitLocationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0DFE9793139EB99200AC7C00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DFE9794139EB99200AC7C00 /* UIKit.framework */,
+				0DFE9796139EB99200AC7C00 /* Foundation.framework */,
+				0DFE9798139EB99200AC7C00 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0DFE979A139EB99200AC7C00 /* EafitLocation */ = {
+			isa = PBXGroup;
+			children = (
+				0DFE97A3139EB99200AC7C00 /* EafitLocationAppDelegate.h */,
+				0DFE97A4139EB99200AC7C00 /* EafitLocationAppDelegate.m */,
+				0DFE97A6139EB99200AC7C00 /* MainWindow.xib */,
+				0DFE979B139EB99200AC7C00 /* Supporting Files */,
+			);
+			path = EafitLocation;
+			sourceTree = "<group>";
+		};
+		0DFE979B139EB99200AC7C00 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0DFE979C139EB99200AC7C00 /* EafitLocation-Info.plist */,
+				0DFE979D139EB99200AC7C00 /* InfoPlist.strings */,
+				0DFE97A0139EB99200AC7C00 /* EafitLocation-Prefix.pch */,
+				0DFE97A1139EB99200AC7C00 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0DFE97B4139EB99200AC7C00 /* EafitLocationTests */ = {
+			isa = PBXGroup;
+			children = (
+				0DFE97BB139EB99200AC7C00 /* EafitLocationTests.h */,
+				0DFE97BD139EB99200AC7C00 /* EafitLocationTests.m */,
+				0DFE97B5139EB99200AC7C00 /* Supporting Files */,
+			);
+			path = EafitLocationTests;
+			sourceTree = "<group>";
+		};
+		0DFE97B5139EB99200AC7C00 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0DFE97B6139EB99200AC7C00 /* EafitLocationTests-Info.plist */,
+				0DFE97B7139EB99200AC7C00 /* InfoPlist.strings */,
+				0DFE97BA139EB99200AC7C00 /* EafitLocationTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0DFE978F139EB99200AC7C00 /* EafitLocation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DFE97C1139EB99200AC7C00 /* Build configuration list for PBXNativeTarget "EafitLocation" */;
+			buildPhases = (
+				0DFE978C139EB99200AC7C00 /* Sources */,
+				0DFE978D139EB99200AC7C00 /* Frameworks */,
+				0DFE978E139EB99200AC7C00 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EafitLocation;
+			productName = EafitLocation;
+			productReference = 0DFE9790139EB99200AC7C00 /* EafitLocation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0DFE97AD139EB99200AC7C00 /* EafitLocationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DFE97C4139EB99200AC7C00 /* Build configuration list for PBXNativeTarget "EafitLocationTests" */;
+			buildPhases = (
+				0DFE97A9139EB99200AC7C00 /* Sources */,
+				0DFE97AA139EB99200AC7C00 /* Frameworks */,
+				0DFE97AB139EB99200AC7C00 /* Resources */,
+				0DFE97AC139EB99200AC7C00 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DFE97B3139EB99200AC7C00 /* PBXTargetDependency */,
+			);
+			name = EafitLocationTests;
+			productName = EafitLocationTests;
+			productReference = 0DFE97AE139EB99200AC7C00 /* EafitLocationTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0DFE9787139EB99200AC7C00 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 0DFE978A139EB99200AC7C00 /* Build configuration list for PBXProject "EafitLocation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0DFE9785139EB99200AC7C00;
+			productRefGroup = 0DFE9791139EB99200AC7C00 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0DFE978F139EB99200AC7C00 /* EafitLocation */,
+				0DFE97AD139EB99200AC7C00 /* EafitLocationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0DFE978E139EB99200AC7C00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DFE979F139EB99200AC7C00 /* InfoPlist.strings in Resources */,
+				0DFE97A8139EB99200AC7C00 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DFE97AB139EB99200AC7C00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DFE97B9139EB99200AC7C00 /* InfoPlist.strings in Resources */,
+				0DFE97BC139EB99200AC7C00 /* EafitLocationTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DFE97AC139EB99200AC7C00 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0DFE978C139EB99200AC7C00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DFE97A2139EB99200AC7C00 /* main.m in Sources */,
+				0DFE97A5139EB99200AC7C00 /* EafitLocationAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DFE97A9139EB99200AC7C00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DFE97BE139EB99200AC7C00 /* EafitLocationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0DFE97B3139EB99200AC7C00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DFE978F139EB99200AC7C00 /* EafitLocation */;
+			targetProxy = 0DFE97B2139EB99200AC7C00 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0DFE979D139EB99200AC7C00 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DFE979E139EB99200AC7C00 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0DFE97A6139EB99200AC7C00 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DFE97A7139EB99200AC7C00 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		0DFE97B7139EB99200AC7C00 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DFE97B8139EB99200AC7C00 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0DFE97BF139EB99200AC7C00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0DFE97C0139EB99200AC7C00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		0DFE97C2139EB99200AC7C00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EafitLocation/EafitLocation-Prefix.pch";
+				INFOPLIST_FILE = "EafitLocation/EafitLocation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0DFE97C3139EB99200AC7C00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EafitLocation/EafitLocation-Prefix.pch";
+				INFOPLIST_FILE = "EafitLocation/EafitLocation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0DFE97C5139EB99200AC7C00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EafitLocation.app/EafitLocation";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EafitLocationTests/EafitLocationTests-Prefix.pch";
+				INFOPLIST_FILE = "EafitLocationTests/EafitLocationTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		0DFE97C6139EB99200AC7C00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EafitLocation.app/EafitLocation";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EafitLocationTests/EafitLocationTests-Prefix.pch";
+				INFOPLIST_FILE = "EafitLocationTests/EafitLocationTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DFE978A139EB99200AC7C00 /* Build configuration list for PBXProject "EafitLocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DFE97BF139EB99200AC7C00 /* Debug */,
+				0DFE97C0139EB99200AC7C00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DFE97C1139EB99200AC7C00 /* Build configuration list for PBXNativeTarget "EafitLocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DFE97C2139EB99200AC7C00 /* Debug */,
+				0DFE97C3139EB99200AC7C00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0DFE97C4139EB99200AC7C00 /* Build configuration list for PBXNativeTarget "EafitLocationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DFE97C5139EB99200AC7C00 /* Debug */,
+				0DFE97C6139EB99200AC7C00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0DFE9787139EB99200AC7C00 /* Project object */;
+}
