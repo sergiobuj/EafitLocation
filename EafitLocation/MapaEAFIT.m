@@ -7,6 +7,7 @@
 //
 
 #import "MapaEAFIT.h"
+#import "MPoint.h"
 
 
 
@@ -27,20 +28,17 @@
         region.center.latitude = 6.199931 ;
         region.center.longitude = -75.578599;
         region.span.longitudeDelta = 0.0003333f;
-        region.span.latitudeDelta = 0.0003814;
+        region.span.latitudeDelta = 0.0003814f;
         [mapview setRegion:region animated:YES]; 
         [mapview setDelegate:self];
         
+        
+        points = [[NSMutableArray alloc] init];
         
         [self setView:mapview];
         
         [self getPoints];
         
-        
-       // UIView * cosita = [[UIView alloc] initWithFrame:CGRectMake(50, 50, 50, 50)];
-        //[cosita setBackgroundColor:[UIColor redColor]];
-        
-        //[self.view addSubview:cosita];
     }
     
     return self;
@@ -53,15 +51,11 @@
     responseData = [[NSMutableData data] retain];
         
     NSURLRequest *request =
-    [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://raw.github.com/sergiobuj/EAFITENSE/catchup/EAFITENSE/Customization.plist"]];
+    [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://elocation.heroku.com/places.xml"]];
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
  
-    NSPropertyListFormat format;
-    NSString *errorDescription = nil;
-    samplePlist = [NSPropertyListSerialization propertyListFromData:responseData mutabilityOption:NSPropertyListImmutable format:&format errorDescription:&errorDescription];
-
+    
 }
-
 
 
 
@@ -70,10 +64,12 @@
     [responseData setLength:0];
 }
 
+
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
     [responseData appendData:data];
 }
+
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
@@ -82,18 +78,48 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-
+    
+    NSPropertyListFormat format;
+    NSString *errorDescription = nil;
+    samplePlist = [NSPropertyListSerialization propertyListFromData:responseData mutabilityOption:NSPropertyListImmutable format:&format errorDescription:&errorDescription];
+    
+    NSString * data = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    
+    NSLog(@"data is %@", data);
+    
+   // NSLog(@"ready");
     for (id key in samplePlist) {
         
         NSLog(@"key: %@, value: %@", key, [samplePlist objectForKey:key]);
         
     }
-    
-
     //NSLog(@"%@", [NSString stringWithUTF8String:[responseData bytes]]);
 
-}
+    
 
+    
+    //////////
+    
+    
+    CLLocationCoordinate2D coord = {[[samplePlist objectForKey:@"latitude"] doubleValue], [[samplePlist objectForKey:@"longitude"] doubleValue]};
+    
+    MPoint *point = [[MPoint alloc] initWithCoordinate:coord];
+    
+    [point setTitle:[samplePlist objectForKey:@"title"]];
+        
+    [points addObject:point];
+    
+    [point release];
+    
+    [mapview addAnnotations:points];
+        
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.0003333f ,0.0003814f);
+
+    MKCoordinateRegion region = MKCoordinateRegionMake([[points objectAtIndex:0] coordinate], span);
+    
+    [mapview setRegion:region animated:YES];
+    
+}
 
 
 
