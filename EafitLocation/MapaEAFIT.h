@@ -18,4 +18,6 @@
     
 }
 
+- (void) getPoints;
+
 @end

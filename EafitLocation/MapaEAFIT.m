@@ -34,7 +34,7 @@
         
         [self setView:mapview];
         
-       // [self getPoints];
+        [self getPoints];
         
         
        // UIView * cosita = [[UIView alloc] initWithFrame:CGRectMake(50, 50, 50, 50)];
@@ -53,8 +53,10 @@
     responseData = [[NSMutableData data] retain];
     
     NSURLRequest *request =
-    [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://elocation.heroku.com/places.xml"]];
+    [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://raw.github.com/sergiobuj/EAFITENSE/catchup/EAFITENSE/Customization.plist"]];
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
+
 }
 
 
