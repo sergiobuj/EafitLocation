@@ -14,6 +14,7 @@
     
     MKMapView *mapview;  
     NSMutableData *responseData;
+    NSDictionary *samplePlist;
 
     
 }

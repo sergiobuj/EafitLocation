@@ -51,13 +51,18 @@
 -(void)getPoints{
 
     responseData = [[NSMutableData data] retain];
-    
+        
     NSURLRequest *request =
     [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://raw.github.com/sergiobuj/EAFITENSE/catchup/EAFITENSE/Customization.plist"]];
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
+ 
+    NSPropertyListFormat format;
+    NSString *errorDescription = nil;
+    samplePlist = [NSPropertyListSerialization propertyListFromData:responseData mutabilityOption:NSPropertyListImmutable format:&format errorDescription:&errorDescription];
 
 }
+
+
 
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
@@ -78,7 +83,14 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
 
-    NSLog(@"%@", [NSString stringWithUTF8String:[responseData bytes]]);
+    for (id key in samplePlist) {
+        
+        NSLog(@"key: %@, value: %@", key, [samplePlist objectForKey:key]);
+        
+    }
+    
+
+    //NSLog(@"%@", [NSString stringWithUTF8String:[responseData bytes]]);
 
 }
 
