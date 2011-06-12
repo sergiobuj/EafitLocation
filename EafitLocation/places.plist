@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"	
+  <dict>
+    <key>map_points</key>
+    <array>
+        <dict>
+          <key>latitude</key>
+          <real>6.1777997</real>
+          <key>longitude</key>
+          <real>-75.570212</real>
+          <key>title</key>
+          <string>La Clarita</string>
+        </dict>
+    </array>
+  </dict>
+</plist>
