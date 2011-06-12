@@ -9,9 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface EafitLocationAppDelegate : NSObject <UIApplicationDelegate> {
-
+    
+    UIWindow *window;
+    UITabBarController *tabBar;
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) UITabBarController *tabBar;
+@property (nonatomic, retain) UIWindow *window;
+
+
 
 @end

@@ -7,16 +7,63 @@
 //
 
 #import "EafitLocationAppDelegate.h"
+#import "MapaEAFIT.h"
+#import "MapaEAFIT2.h"
+#import "MapaEAFIT3.h"
 
 @implementation EafitLocationAppDelegate
 
+@synthesize window;
 
-@synthesize window=_window;
+@synthesize tabBar;
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    [self.window makeKeyAndVisible];
+    tabBar = [[UITabBarController alloc] init];
+	
+	/////First TAB 
+    MapaEAFIT * mapaEafit = [[MapaEAFIT alloc] init];
+	[mapaEafit setTitle:@"Map"];
+	UINavigationController *mapController = [[UINavigationController alloc] init];
+	mapController.tabBarItem.image = [UIImage imageNamed:@"home_20.png"];
+	[mapController pushViewController:mapaEafit animated:YES];
+	[mapController setTitle:@"Map"];
+	[mapaEafit release];
+    
+
+	/////Second TAB 
+    
+    MapaEAFIT2 * mapaEafit2 = [[MapaEAFIT2 alloc] init];
+	[mapaEafit2 setTitle:@"Events"];
+	UINavigationController *eventController = [[UINavigationController alloc] init];
+	eventController.tabBarItem.image = [UIImage imageNamed:@"info_20.png"];
+	[eventController pushViewController:mapaEafit2 animated:YES];
+	[eventController setTitle:@"Events"];
+	[mapaEafit2 release];
+
+    /////Third TAB 
+    
+    MapaEAFIT3 * mapaEafit3 = [[MapaEAFIT3 alloc] init];
+	[mapaEafit3 setTitle:@"Search"];
+	UINavigationController *searchController = [[UINavigationController alloc] init];
+	searchController.tabBarItem.image = [UIImage imageNamed:@"info_20.png"];
+	[searchController pushViewController:mapaEafit3 animated:YES];
+	[searchController setTitle:@"Search"];
+	[mapaEafit3 release];
+
+	
+	[tabBar setViewControllers:[NSArray arrayWithObjects:mapController,eventController,searchController,nil] animated:YES];
+	[window addSubview:tabBar.view];
+    
+	[mapController release];
+    [eventController release];
+    [searchController release];
+
+
+	[window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -59,10 +106,9 @@
      */
 }
 
-- (void)dealloc
-{
-    [_window release];
+- (void)dealloc {
+    [tabBar release];
+    [window release];
     [super dealloc];
 }
-
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D6AE31C13A3D5330037AF53 /* MapaEAFIT2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6AE31B13A3D5330037AF53 /* MapaEAFIT2.m */; };
+		0D6AE32013A3D8650037AF53 /* MapaEAFIT3.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6AE31F13A3D8650037AF53 /* MapaEAFIT3.m */; };
 		0DFE9795139EB99200AC7C00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFE9794139EB99200AC7C00 /* UIKit.framework */; };
 		0DFE9797139EB99200AC7C00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFE9796139EB99200AC7C00 /* Foundation.framework */; };
 		0DFE9799139EB99200AC7C00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFE9798139EB99200AC7C00 /* CoreGraphics.framework */; };
@@ -20,6 +22,10 @@
 		0DFE97B9139EB99200AC7C00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DFE97B7139EB99200AC7C00 /* InfoPlist.strings */; };
 		0DFE97BC139EB99200AC7C00 /* EafitLocationTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 0DFE97BB139EB99200AC7C00 /* EafitLocationTests.h */; };
 		0DFE97BE139EB99200AC7C00 /* EafitLocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE97BD139EB99200AC7C00 /* EafitLocationTests.m */; };
+		0DFE97D7139ECBF900AC7C00 /* home_20.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DFE97D5139ECBF900AC7C00 /* home_20.png */; };
+		0DFE97D8139ECBF900AC7C00 /* info_20.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DFE97D6139ECBF900AC7C00 /* info_20.png */; };
+		0DFE97DB139ECFA100AC7C00 /* MapaEAFIT.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE97DA139ECFA100AC7C00 /* MapaEAFIT.m */; };
+		0DFE97E5139EDBDE00AC7C00 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFE97E4139EDBDE00AC7C00 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,23 +39,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D6AE31A13A3D5330037AF53 /* MapaEAFIT2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapaEAFIT2.h; sourceTree = "<group>"; };
+		0D6AE31B13A3D5330037AF53 /* MapaEAFIT2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaEAFIT2.m; sourceTree = "<group>"; };
+		0D6AE31E13A3D8650037AF53 /* MapaEAFIT3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapaEAFIT3.h; sourceTree = "<group>"; };
+		0D6AE31F13A3D8650037AF53 /* MapaEAFIT3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaEAFIT3.m; sourceTree = "<group>"; };
 		0DFE9790139EB99200AC7C00 /* EafitLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EafitLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DFE9794139EB99200AC7C00 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0DFE9796139EB99200AC7C00 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0DFE9798139EB99200AC7C00 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0DFE979C139EB99200AC7C00 /* EafitLocation-Info.plist */ = {isa = PBXFileReference; path = "EafitLocation-Info.plist"; sourceTree = "<group>"; };
+		0DFE979C139EB99200AC7C00 /* EafitLocation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EafitLocation-Info.plist"; sourceTree = "<group>"; };
 		0DFE979E139EB99200AC7C00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0DFE97A0139EB99200AC7C00 /* EafitLocation-Prefix.pch */ = {isa = PBXFileReference; path = "EafitLocation-Prefix.pch"; sourceTree = "<group>"; };
+		0DFE97A0139EB99200AC7C00 /* EafitLocation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EafitLocation-Prefix.pch"; sourceTree = "<group>"; };
 		0DFE97A1139EB99200AC7C00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0DFE97A3139EB99200AC7C00 /* EafitLocationAppDelegate.h */ = {isa = PBXFileReference; path = EafitLocationAppDelegate.h; sourceTree = "<group>"; };
+		0DFE97A3139EB99200AC7C00 /* EafitLocationAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EafitLocationAppDelegate.h; sourceTree = "<group>"; };
 		0DFE97A4139EB99200AC7C00 /* EafitLocationAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EafitLocationAppDelegate.m; sourceTree = "<group>"; };
 		0DFE97A7139EB99200AC7C00 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		0DFE97AE139EB99200AC7C00 /* EafitLocationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EafitLocationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DFE97B6139EB99200AC7C00 /* EafitLocationTests-Info.plist */ = {isa = PBXFileReference; path = "EafitLocationTests-Info.plist"; sourceTree = "<group>"; };
+		0DFE97B6139EB99200AC7C00 /* EafitLocationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EafitLocationTests-Info.plist"; sourceTree = "<group>"; };
 		0DFE97B8139EB99200AC7C00 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0DFE97BA139EB99200AC7C00 /* EafitLocationTests-Prefix.pch */ = {isa = PBXFileReference; path = "EafitLocationTests-Prefix.pch"; sourceTree = "<group>"; };
+		0DFE97BA139EB99200AC7C00 /* EafitLocationTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EafitLocationTests-Prefix.pch"; sourceTree = "<group>"; };
 		0DFE97BB139EB99200AC7C00 /* EafitLocationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EafitLocationTests.h; sourceTree = "<group>"; };
 		0DFE97BD139EB99200AC7C00 /* EafitLocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EafitLocationTests.m; sourceTree = "<group>"; };
+		0DFE97D5139ECBF900AC7C00 /* home_20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_20.png; path = EafitLocation/images/home_20.png; sourceTree = "<group>"; };
+		0DFE97D6139ECBF900AC7C00 /* info_20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info_20.png; path = EafitLocation/images/info_20.png; sourceTree = "<group>"; };
+		0DFE97D9139ECFA100AC7C00 /* MapaEAFIT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapaEAFIT.h; sourceTree = "<group>"; };
+		0DFE97DA139ECFA100AC7C00 /* MapaEAFIT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaEAFIT.m; sourceTree = "<group>"; };
+		0DFE97E4139EDBDE00AC7C00 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DFE97E5139EDBDE00AC7C00 /* MapKit.framework in Frameworks */,
 				0DFE9795139EB99200AC7C00 /* UIKit.framework in Frameworks */,
 				0DFE9797139EB99200AC7C00 /* Foundation.framework in Frameworks */,
 				0DFE9799139EB99200AC7C00 /* CoreGraphics.framework in Frameworks */,
@@ -79,6 +95,9 @@
 		0DFE9785139EB99200AC7C00 = {
 			isa = PBXGroup;
 			children = (
+				0DFE97E4139EDBDE00AC7C00 /* MapKit.framework */,
+				0DFE97D5139ECBF900AC7C00 /* home_20.png */,
+				0DFE97D6139ECBF900AC7C00 /* info_20.png */,
 				0DFE979A139EB99200AC7C00 /* EafitLocation */,
 				0DFE97B4139EB99200AC7C00 /* EafitLocationTests */,
 				0DFE9793139EB99200AC7C00 /* Frameworks */,
@@ -110,8 +129,14 @@
 			children = (
 				0DFE97A3139EB99200AC7C00 /* EafitLocationAppDelegate.h */,
 				0DFE97A4139EB99200AC7C00 /* EafitLocationAppDelegate.m */,
+				0D6AE31E13A3D8650037AF53 /* MapaEAFIT3.h */,
+				0D6AE31F13A3D8650037AF53 /* MapaEAFIT3.m */,
 				0DFE97A6139EB99200AC7C00 /* MainWindow.xib */,
 				0DFE979B139EB99200AC7C00 /* Supporting Files */,
+				0DFE97D9139ECFA100AC7C00 /* MapaEAFIT.h */,
+				0DFE97DA139ECFA100AC7C00 /* MapaEAFIT.m */,
+				0D6AE31A13A3D5330037AF53 /* MapaEAFIT2.h */,
+				0D6AE31B13A3D5330037AF53 /* MapaEAFIT2.m */,
 			);
 			path = EafitLocation;
 			sourceTree = "<group>";
@@ -216,6 +241,8 @@
 			files = (
 				0DFE979F139EB99200AC7C00 /* InfoPlist.strings in Resources */,
 				0DFE97A8139EB99200AC7C00 /* MainWindow.xib in Resources */,
+				0DFE97D7139ECBF900AC7C00 /* home_20.png in Resources */,
+				0DFE97D8139ECBF900AC7C00 /* info_20.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +280,9 @@
 			files = (
 				0DFE97A2139EB99200AC7C00 /* main.m in Sources */,
 				0DFE97A5139EB99200AC7C00 /* EafitLocationAppDelegate.m in Sources */,
+				0DFE97DB139ECFA100AC7C00 /* MapaEAFIT.m in Sources */,
+				0D6AE31C13A3D5330037AF53 /* MapaEAFIT2.m in Sources */,
+				0D6AE32013A3D8650037AF53 /* MapaEAFIT3.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +372,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EafitLocation/EafitLocation-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "EafitLocation/EafitLocation-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -355,6 +386,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EafitLocation/EafitLocation-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "EafitLocation/EafitLocation-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
@@ -425,6 +457,7 @@
 				0DFE97C3139EB99200AC7C00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DFE97C4139EB99200AC7C00 /* Build configuration list for PBXNativeTarget "EafitLocationTests" */ = {
 			isa = XCConfigurationList;
@@ -433,6 +466,7 @@
 				0DFE97C6139EB99200AC7C00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
