@@ -10,14 +10,16 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-@interface MPoint : UIViewController {
+@interface MPoint : NSObject <MKAnnotation> {
     
     CLLocationCoordinate2D coordinate;
 	NSString *title;
+	NSString *subtitle;
     
 }
 
 @property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *subtitle;
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D) location;

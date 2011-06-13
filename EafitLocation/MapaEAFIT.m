@@ -81,7 +81,7 @@
     
     NSPropertyListFormat format;
     NSString *errorDescription = nil;
-    samplePlist = [NSPropertyListSerialization propertyListFromData:responseData mutabilityOption:NSPropertyListImmutable format:&format errorDescription:&errorDescription];
+    NSDictionary *samplePlist = [NSPropertyListSerialization propertyListFromData:responseData mutabilityOption:NSPropertyListImmutable format:&format errorDescription:&errorDescription];
     
     NSString * data = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     
@@ -101,32 +101,36 @@
     //////////
     
     
-    CLLocationCoordinate2D coord = {[[samplePlist objectForKey:@"latitude"] doubleValue], [[samplePlist objectForKey:@"longitude"] doubleValue]};
-    
-    MPoint *point = [[MPoint alloc] initWithCoordinate:coord];
-    
-    [point setTitle:[samplePlist objectForKey:@"title"]];
+    for (NSDictionary *dict in [samplePlist objectForKey:@"map_points"]) {
         
-    [points addObject:point];
-    
-    [point release];
-    
-    [mapview addAnnotations:points];
+        //	NSLog(@"%lf %lf %@", [[dict objectForKey:@"latitude"] doubleValue], [[dict objectForKey:@"longitude"] doubleValue], [dict objectForKey:@"title"]);
         
-    MKCoordinateSpan span = MKCoordinateSpanMake(0.0003333f ,0.0003814f);
+        
+        CLLocationCoordinate2D coord = { [[dict objectForKey:@"latitude"] doubleValue] , [[dict objectForKey:@"longitude"] doubleValue] };
+        
+        MPoint *point = [[MPoint alloc] initWithCoordinate:coord];
+        
+        [point setTitle:[dict objectForKey:@"title"]];
+        [point setSubtitle:[dict objectForKey:@"subtitle"]];
 
-    MKCoordinateRegion region = MKCoordinateRegionMake([[points objectAtIndex:0] coordinate], span);
+        [points addObject:point];
+        
+        [point release];
+    }	
+    [mapview addAnnotations:points];
+    
+    MKCoordinateRegion region;
+    region.center.latitude = [[points objectAtIndex:0] coordinate].latitude;
+    region.center.longitude = [[points objectAtIndex:0] coordinate].longitude;
+    region.span.longitudeDelta = 0.003338;
+    region.span.latitudeDelta = 0.003806;
     
     [mapview setRegion:region animated:YES];
     
 }
 
 
-
-
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated{
-    
-    
     
     NSLog(@"%lf %lf", [mapview region].center.latitude, [mapview region].center.longitude);
     NSLog(@"%lf %lf", [mapview region].span.longitudeDelta, [mapview region].span.latitudeDelta);
@@ -146,6 +150,8 @@
 
 - (void)dealloc
 {
+    [points release];
+	[mapview release];
     [super dealloc];
 }
 
@@ -166,9 +172,6 @@
 //    mapview = [[MKMapView alloc] initWithFrame:(self.view.frame)];
     
     [super viewDidLoad];
-
-
-    
     
 //    mapview = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
 //    [self.view addSubview:mapview];
@@ -182,6 +185,25 @@
         
     
 }
+
+
+
+- (void)mapViewWillStartLoadingMap:(MKMapView *)mapView {}
+- (void)mapViewDidFinishLoadingMap:(MKMapView *)mapView {}
+- (void)mapViewDidFailLoadingMap:(MKMapView *)mapView withError:(NSError *)error {}
+
+// mapView:viewForAnnotation: provides the view for each annotation.
+// This method may be called for all or some of the added annotations.
+// For MapKit provided annotations (eg. MKUserLocation) return nil to use the MapKit provided annotation view.
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation { return nil; }
+
+// mapView:didAddAnnotationViews: is called after the annotation views have been added and positioned in the map.
+// The delegate can implement this method to animate the adding of the annotations views.
+// Use the current positions of the annotation views as the destinations of the animation.
+- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views {}
+
+// mapView:annotationView:calloutAccessoryControlTapped: is called when the user taps on left & right callout accessory UIControls.
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {}
 
 
 
