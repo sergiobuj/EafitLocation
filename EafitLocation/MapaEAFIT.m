@@ -8,7 +8,7 @@
 
 #import "MapaEAFIT.h"
 #import "MPoint.h"
-
+#import "ServicesModal.h"
 
 
 @implementation MapaEAFIT
@@ -84,29 +84,7 @@
     NSString *errorDescription = nil;
     NSDictionary *samplePlist = [NSPropertyListSerialization propertyListFromData:responseData mutabilityOption:NSPropertyListImmutable format:&format errorDescription:&errorDescription];
     
-    NSString * data = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    
-    NSLog(@"data is %@", data);
-    
-   // NSLog(@"ready");
-    for (id key in samplePlist) {
-        
-        NSLog(@"key: %@, value: %@", key, [samplePlist objectForKey:key]);
-        
-    }
-    //NSLog(@"%@", [NSString stringWithUTF8String:[responseData bytes]]);
-
-    
-
-    
-    //////////
-    
-    
-    for (NSDictionary *dict in [samplePlist objectForKey:@"map_points"]) {
-        
-        //	NSLog(@"%lf %lf %@", [[dict objectForKey:@"latitude"] doubleValue], [[dict objectForKey:@"longitude"] doubleValue], [dict objectForKey:@"title"]);
-        
-        
+     for (NSDictionary *dict in [samplePlist objectForKey:@"map_points"]) {
         CLLocationCoordinate2D coord = { [[dict objectForKey:@"latitude"] doubleValue] , [[dict objectForKey:@"longitude"] doubleValue] };
         
         MPoint *point = [[MPoint alloc] initWithCoordinate:coord];
@@ -129,15 +107,6 @@
     [mapview setRegion:region animated:YES];
     
 }
-
-
-- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated{
-    
-    NSLog(@"%lf %lf", [mapview region].center.latitude, [mapview region].center.longitude);
-    NSLog(@"%lf %lf", [mapview region].span.longitudeDelta, [mapview region].span.latitudeDelta);
-}
-
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -172,9 +141,12 @@
 }
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
-   // NSLog(@"annotation");
-    NSLog(@"pinAnotation %p", self);
-
+	
+	ServicesModal * modal = [[ServicesModal alloc] initWithPlace:[[view annotation] title]];
+	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:modal];
+	[self.navigationController presentModalViewController:navController animated:YES];
+	[navController release];
+	[modal release];
 }
 
 
