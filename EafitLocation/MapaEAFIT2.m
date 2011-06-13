@@ -16,7 +16,7 @@
     self = [super init];
     if(self){
         
-            }
+	}
     
     return self;
     
@@ -39,6 +39,7 @@
 - (void)dealloc
 {
     [super dealloc];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,13 +59,31 @@
 }
 */
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	UIView * infoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+	info = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+	
+	[info setFont:[UIFont fontWithName:@"Helvetica" size:14]];
+	[info setBackgroundColor:[UIColor lightGrayColor]];
+	
+	[info setText:@"Creado por Juan Felipe Arango y Nicolás Hock"];
+	
+	
+	[infoView addSubview:info];
+	
+	
+	
+	[self setView:infoView];
+	
+	[info release];
+	[infoView release];
 }
-*/
+
 
 - (void)viewDidUnload
 {

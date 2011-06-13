@@ -7,7 +7,6 @@
 //
 
 #import "MapaEAFIT.h"
-#import "MPoint.h"
 #import "ServicesModal.h"
 
 
@@ -88,12 +87,12 @@
         CLLocationCoordinate2D coord = { [[dict objectForKey:@"latitude"] doubleValue] , [[dict objectForKey:@"longitude"] doubleValue] };
         
         MPoint *point = [[MPoint alloc] initWithCoordinate:coord];
-        
-        [point setTitle:[dict objectForKey:@"title"]];
-        [point setSubtitle:[dict objectForKey:@"subtitle"]];
-
-        [points addObject:point];
-        
+		 
+		 [point setTitle:[dict objectForKey:@"title"]];
+		 [point setSubtitle:[dict objectForKey:@"subtitle"]];
+		 [point setID:[dict objectForKey:@"permalink"]];
+		 [points addObject:point];
+		 
         [point release];
     }	
     [mapview addAnnotations:points];
@@ -121,11 +120,11 @@
 
 - (MKAnnotationView *)mapView:(MKMapView *)mV viewForAnnotation:(id <MKAnnotation>)annotation
 {
-    MKPinAnnotationView *pinAnnotation = nil;
+    SBAnnotationView *pinAnnotation = nil;
     if(annotation != mV.userLocation) 
     {
         static NSString *defaultPinID = @"myPin";
-        pinAnnotation = (MKPinAnnotationView *)[mV dequeueReusableAnnotationViewWithIdentifier:defaultPinID];
+        pinAnnotation = (SBAnnotationView *)[mV dequeueReusableAnnotationViewWithIdentifier:defaultPinID];
         if ( pinAnnotation == nil )
             pinAnnotation = [[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:defaultPinID] autorelease];
         
@@ -142,20 +141,21 @@
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
 	
-	ServicesModal * modal = [[ServicesModal alloc] initWithPlace:[[view annotation] title]];
+	ServicesModal * modal = [[ServicesModal alloc] initWithPlace:[(SBAnnotationView *)[view annotation] ID]];
 	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:modal];
 	[self.navigationController presentModalViewController:navController animated:YES];
 	[navController release];
 	[modal release];
+	
 }
 
 
 
 - (void)dealloc
 {
-    [points release];
+	[points release];
 	[mapview release];
-    [super dealloc];
+	[super dealloc];
 }
 
 - (void)didReceiveMemoryWarning

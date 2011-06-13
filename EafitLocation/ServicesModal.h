@@ -12,8 +12,12 @@
 @interface ServicesModal : UIViewController
 {
 	NSString * place;
+	NSArray * services;
+
+
 }
 @property (nonatomic, copy) NSString * place;
+
 - (id) initWithPlace:(NSString *) thisPlace;
 
 @end

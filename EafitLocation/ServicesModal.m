@@ -22,15 +22,59 @@
  return self;
  }
  */
+
+
+
+
 - (id) initWithPlace:(NSString *) thisPlace {
 	self = [super init];
 	if (self) {
+
+		
+		services = [[NSArray alloc] initWithObjects:@"Loading...", nil];
+			
+		
+		[[NSOperationQueue mainQueue] addOperationWithBlock:^{
+			
+			
+			NSError * error = nil;
+			NSPropertyListFormat format;
+			NSString *errorDescription = nil;
+
+			NSString * urlString = [NSString stringWithFormat:@"http://elocation.heroku.com/places/%@.xml",thisPlace];
+			
+			urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+			
+			if(urlString){
+				NSData * resourceAsData = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString] options:NSPropertyListImmutable error:&error];
+				
+				if (error) {
+					NSLog(@"%@", error);
+				}else {
+					NSDictionary *samplePlist = [NSPropertyListSerialization propertyListFromData:resourceAsData mutabilityOption:NSPropertyListImmutable format:&format errorDescription:&errorDescription];				
+					services = [samplePlist objectForKey:@"services"];
+
+					
+					[self setTitle:[samplePlist objectForKey:@"title"]];
+					
+					for (NSString * str in [services mutableArrayValueForKey:@"title"]) {
+						NSLog(@"%@", str);
+					}
+				}
+			}
+			
+		}];
 		[self setPlace:thisPlace];
-		[self setTitle:place];
 	}
 	return self;
 }
 
+- (void) reloadTable
+{
+	
+
+	
+}
 
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
@@ -38,8 +82,9 @@
 //    [super viewDidLoad];
 	// the creation
 	UIView *contentView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen]applicationFrame]];
-	[contentView setBackgroundColor:[UIColor redColor]];
+	[contentView setBackgroundColor:[UIColor lightGrayColor]];
 
+	
 	[self setView:contentView];
 	[contentView release];
 }
@@ -55,15 +100,6 @@
 	[cancelB release];
 	
 }
-
-
-/*
- // Override to allow orientations other than the default portrait orientation.
- - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
- // Return YES for supported orientations
- return (interfaceOrientation == UIInterfaceOrientationPortrait);
- }
- */
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -84,5 +120,11 @@
 	[super dealloc];
 }
 
+//- (NSInteger)tableView:(UITableView *)tbv numberOfRowsInSection:(NSInteger)section {
+//	return [services count];
+//}
+//- (UITableViewCell *)tableView:(UITableView *)tbv cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+//	return [UITableViewController tableView:tbv cellForRowAtIndexPath:indexPath];
+//}
 
 @end

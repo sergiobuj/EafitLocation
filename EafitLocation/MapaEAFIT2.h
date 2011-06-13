@@ -12,7 +12,7 @@
 
 @interface MapaEAFIT2 : UIViewController  {
     
-    
+    UILabel * info;
 }
 
 @end

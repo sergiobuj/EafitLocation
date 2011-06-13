@@ -36,11 +36,11 @@
 
     
     MapaEAFIT2 * mapaEafit2 = [[MapaEAFIT2 alloc] init];
-	[mapaEafit2 setTitle:@"Services"];
+	[mapaEafit2 setTitle:@"Info"];
 	UINavigationController *servicesController = [[UINavigationController alloc] init];
 	servicesController.tabBarItem.image = [UIImage imageNamed:@"info_20.png"];
 	[servicesController pushViewController:mapaEafit2 animated:YES];
-	[servicesController setTitle:@"Services"];
+	[servicesController setTitle:@"Info"];
 	[mapaEafit2 release];
 
 	

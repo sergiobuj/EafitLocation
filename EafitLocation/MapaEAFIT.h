@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import <MapKit/MapKit.h>
+#import "MPoint.h"
+#import "SBAnnotationView.h"
 
 @interface MapaEAFIT : UIViewController <MKMapViewDelegate> {
     

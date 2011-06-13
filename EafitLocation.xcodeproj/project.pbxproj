@@ -26,6 +26,7 @@
 		0DFE97D8139ECBF900AC7C00 /* info_20.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DFE97D6139ECBF900AC7C00 /* info_20.png */; };
 		0DFE97DB139ECFA100AC7C00 /* MapaEAFIT.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE97DA139ECFA100AC7C00 /* MapaEAFIT.m */; };
 		0DFE97E5139EDBDE00AC7C00 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFE97E4139EDBDE00AC7C00 /* MapKit.framework */; };
+		A059FC1C13A651B200D95DAC /* SBAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A059FC1B13A651B200D95DAC /* SBAnnotationView.m */; };
 		A0A2409813A5C894007B5BFE /* ServicesModal.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A2409613A5C894007B5BFE /* ServicesModal.m */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,8 @@
 		0DFE97D9139ECFA100AC7C00 /* MapaEAFIT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapaEAFIT.h; sourceTree = "<group>"; };
 		0DFE97DA139ECFA100AC7C00 /* MapaEAFIT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaEAFIT.m; sourceTree = "<group>"; };
 		0DFE97E4139EDBDE00AC7C00 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A059FC1A13A651B200D95DAC /* SBAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBAnnotationView.h; sourceTree = "<group>"; };
+		A059FC1B13A651B200D95DAC /* SBAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBAnnotationView.m; sourceTree = "<group>"; };
 		A0A2409613A5C894007B5BFE /* ServicesModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicesModal.m; sourceTree = "<group>"; };
 		A0A2409713A5C894007B5BFE /* ServicesModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicesModal.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +145,8 @@
 				0DFE97DA139ECFA100AC7C00 /* MapaEAFIT.m */,
 				0D6AE31A13A3D5330037AF53 /* MapaEAFIT2.h */,
 				0D6AE31B13A3D5330037AF53 /* MapaEAFIT2.m */,
+				A059FC1A13A651B200D95DAC /* SBAnnotationView.h */,
+				A059FC1B13A651B200D95DAC /* SBAnnotationView.m */,
 			);
 			path = EafitLocation;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 				0D6AE31C13A3D5330037AF53 /* MapaEAFIT2.m in Sources */,
 				0D6AE32913A568BE0037AF53 /* MPoint.m in Sources */,
 				A0A2409813A5C894007B5BFE /* ServicesModal.m in Sources */,
+				A059FC1C13A651B200D95DAC /* SBAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
