@@ -9,7 +9,6 @@
 #import "EafitLocationAppDelegate.h"
 #import "MapaEAFIT.h"
 #import "MapaEAFIT2.h"
-#import "MapaEAFIT3.h"
 
 @implementation EafitLocationAppDelegate
 
@@ -34,32 +33,23 @@
     
 
 	/////Second TAB 
+
     
     MapaEAFIT2 * mapaEafit2 = [[MapaEAFIT2 alloc] init];
-	[mapaEafit2 setTitle:@"Events"];
-	UINavigationController *eventController = [[UINavigationController alloc] init];
-	eventController.tabBarItem.image = [UIImage imageNamed:@"info_20.png"];
-	[eventController pushViewController:mapaEafit2 animated:YES];
-	[eventController setTitle:@"Events"];
+	[mapaEafit2 setTitle:@"Services"];
+	UINavigationController *servicesController = [[UINavigationController alloc] init];
+	servicesController.tabBarItem.image = [UIImage imageNamed:@"info_20.png"];
+	[servicesController pushViewController:mapaEafit2 animated:YES];
+	[servicesController setTitle:@"Services"];
 	[mapaEafit2 release];
 
-    /////Third TAB 
-    
-    MapaEAFIT3 * mapaEafit3 = [[MapaEAFIT3 alloc] init];
-	[mapaEafit3 setTitle:@"Search"];
-	UINavigationController *searchController = [[UINavigationController alloc] init];
-	searchController.tabBarItem.image = [UIImage imageNamed:@"info_20.png"];
-	[searchController pushViewController:mapaEafit3 animated:YES];
-	[searchController setTitle:@"Search"];
-	[mapaEafit3 release];
-
 	
-	[tabBar setViewControllers:[NSArray arrayWithObjects:mapController,eventController,searchController,nil] animated:YES];
+	[tabBar setViewControllers:[NSArray arrayWithObjects:mapController,servicesController,nil] animated:YES];
 	[window addSubview:tabBar.view];
     
 	[mapController release];
-    [eventController release];
-    [searchController release];
+    [servicesController release];
+
 
 
 	[window makeKeyAndVisible];
